@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.calclab</groupId>
 	<artifactId>emite</artifactId>
-	<version>surevine-68</version>
+	<version>0.9-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Emite</name>
 	<description>A pure Google Web Toolkit XMPP library</description>
@@ -19,7 +19,7 @@
 
 	<properties>
 		<!-- Convenience property to set the GWT version -->
-		<gwt.version>2.3.0</gwt.version>
+		<gwt.version>2.5.1</gwt.version>
 		<!-- GWT 2.2+ needs java 1.6 -->
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
@@ -96,7 +96,7 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>gwt-maven-plugin</artifactId>
-				<version>${gwt.version}-1</version>
+				<version>${gwt.version}</version>
 				<configuration>
 					<includes>**/*GwtTest.java</includes>
 					<mode>htmlunit</mode>
@@ -193,4 +193,14 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+  <distributionManagement>
+    <repository>
+      <id>comunes-internal</id>
+      <url>http://archiva.comunes.org/repository/comunes-internal/</url>
+    </repository>
+    <snapshotRepository>
+      <id>comunes-snapshots</id>
+      <url>http://archiva.comunes.org/repository/comunes-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 </project>
